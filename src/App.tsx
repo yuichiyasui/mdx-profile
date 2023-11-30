@@ -1,10 +1,9 @@
-import Hello from "./Hello.mdx";
+import Profile from "./Profile.mdx";
 
 export default function App() {
   return (
-    <>
-      <h1 className="font-bold text-3xl text-center py-10">Hello World!</h1>
-      <Hello />
-    </>
+    <main className="bg-white shadow print:shadow-none w-[1024px] mx-auto my-10">
+      <Profile />
+    </main>
   );
 }

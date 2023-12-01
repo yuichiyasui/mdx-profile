@@ -4,20 +4,20 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
     ...components,
     h1: (props) => (
-      <h1 className="text-3xl font-bold py-2">{props.children}</h1>
+      <h1 className="py-2 text-3xl font-bold">{props.children}</h1>
     ),
     h2: (props) => (
-      <h2 className="text-2xl font-bold py-1 border-b border-b-gray-200 mb-4">
+      <h2 className="mb-4 border-b border-b-gray-200 py-1 text-2xl font-bold">
         {props.children}
       </h2>
     ),
     h3: (props) => <h3 className="text-xl font-bold">{props.children}</h3>,
     h4: (props) => <h4 className="text-lg font-bold">{props.children}</h4>,
     table: (props) => (
-      <table className="border-collapse w-full">{props.children}</table>
+      <table className="w-full border-collapse">{props.children}</table>
     ),
     th: (props) => (
-      <th className="border border-gray-200 bg-gray-100 whitespace-nowrap px-4 py-2">
+      <th className="whitespace-nowrap border border-gray-200 bg-gray-100 px-4 py-2">
         {props.children}
       </th>
     ),
@@ -29,7 +29,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         className={
           props.className?.includes("contains-task-list")
             ? "list-none"
-            : "list-disc list-inside"
+            : "list-inside list-disc"
         }
       >
         {props.children}
@@ -47,12 +47,10 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     ),
     input: (props) => {
       if (props.type === "checkbox") {
-        return (
-          <input className="form-checkbox h-5 w-5" type="checkbox" {...props} />
-        );
+        return <input className="h-5 w-5" type="checkbox" {...props} />;
       }
 
-      return <input className="form-input rounded-md" type="text" {...props} />;
+      return <input className="rounded-md" type="text" {...props} />;
     },
   };
 }

@@ -1,15 +1,102 @@
-# Welcome to my MDX page!
+import { CreatedAt } from "./_components/CreatedAt";
+import { DescriptionList } from "./_components/DescriptionList";
+import { Spacer } from "./_components/Spacer";
+import { PageBreak } from "./_components/PageBreak";
 
-This is some **bold** and _italics_ text.
+import JobMdx from "./job.mdx";
 
-This is a list in markdown:
+# スキルシート
 
-- One
-- Two
-- Three
+<CreatedAt date="2023/12/4" />
 
-| Name  | Age |
-| ----- | --- |
-| James | 30  |
+## 基本情報
 
-Checkout my React component:
+<DescriptionList
+  contents={[
+    { title: "会社名", description: "株式会社○○" },
+    { title: "氏名", description: "サンプル 太郎" },
+    { title: "経験年数", description: "○年○ヶ月" },
+  ]}
+/>
+
+<Spacer />
+
+## スキル概要
+
+<DescriptionList
+  contents={[
+    {
+      title: "言語",
+      description: ["HTML", "CSS", "JavaScript", "Java", "Go"],
+    },
+    {
+      title: "フレームワーク",
+      description: [
+        "Next.js",
+        "Apollo",
+        "Express",
+        "NestJS",
+        "SpringBoot",
+        "Gin",
+      ],
+    },
+    {
+      title: "開発ツール",
+      description: ["VSCode", "GitHub"],
+    },
+  ]}
+/>
+
+<Spacer />
+
+## 資格
+
+- 基本情報技術者試験
+- AWS SAA
+
+<Spacer />
+
+## 自己PR
+
+技術トレンドや開発プラクティスなどを積極的に追っています。
+
+プロダクトのUI/UXの向上、開発環境の快適化、コードのメンテナンス性の向上を追い求めて仕入れた情報で使えそうなものがあれば積極的に取り入れる提案をする姿勢を持っています。
+
+<Spacer />
+<PageBreak />
+
+## 職務経歴
+
+### ○○プロジェクト
+
+<DescriptionList
+  contents={[
+    {
+      title: "期間",
+      description: "2020/1/1 ~ 2020/12/31",
+    },
+    {
+      title: "概要",
+      description: `
+      ○○の開発
+      aaaa
+      `,
+    },
+    {
+      title: "役割",
+      description: ["フロントエンドエンジニア", "スクラムマスター"],
+    },
+    {
+      title: "担当",
+      description: "○○の開発",
+    },
+    {
+      title: "利用技術",
+      description: "○○",
+    },
+    {
+      title: "業務内容",
+      description: <JobMdx />,
+    },
+  ]}
+/>

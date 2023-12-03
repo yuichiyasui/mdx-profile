@@ -7,12 +7,14 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       <h1 className="py-2 text-3xl font-bold">{props.children}</h1>
     ),
     h2: (props) => (
-      <h2 className="mb-4 border-b border-b-gray-200 py-1 text-2xl font-bold">
+      <h2 className="mb-4 border-b border-b-gray-200 pb-1 pt-2 text-2xl font-bold">
         {props.children}
       </h2>
     ),
-    h3: (props) => <h3 className="text-xl font-bold">{props.children}</h3>,
-    h4: (props) => <h4 className="text-lg font-bold">{props.children}</h4>,
+    h3: (props) => (
+      <h3 className="mb-2 py-1 text-xl font-bold">{props.children}</h3>
+    ),
+    h4: (props) => <h4 className="py-1 text-lg font-bold">{props.children}</h4>,
     table: (props) => (
       <table className="w-full border-collapse">{props.children}</table>
     ),
@@ -35,6 +37,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         {props.children}
       </ul>
     ),
+    li: (props) => <li className="pl-2">{props.children}</li>,
     a: (props) => (
       <a
         className="text-blue-600 hover:underline"
